@@ -23,8 +23,10 @@ void insertion_sort_list(listint_t **list)
 		while (tmp->prev != NULL && tmp_prev->n > tmp->n)
 		{
 			if (tmp_next != NULL)
+			{
 				tmp_next->prev = tmp_prev;
 				tmp_prev->next = tmp_next;
+			}
 			if (tmp_prev->prev == NULL)
 			{
 				tmp_prev->prev = tmp;
